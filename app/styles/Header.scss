@@ -1,0 +1,52 @@
+.header {
+  width: 100%;
+  @include flex-container;
+  justify-content: space-between;
+  gap: 5%;
+  padding: 2% 5%;
+
+
+  .photo-wrapper {
+    width: 15%;
+    &__img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      &:hover {
+        opacity: 93%;
+      }
+    }
+  }
+
+  .icons-wrapper {
+    width: 30%;
+    @include flex-container;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__link {
+      height: auto;
+    }
+
+    &__icon {
+      :hover {
+        fill: red;
+      }
+    }
+  }
+
+  .btn-wrapper {
+    width: 60%;
+    &__btn {
+      width: 100%;
+      @include flex-container;
+      padding: 4% 3%;
+      border-radius: 20px;
+      border: 2px white solid;
+      font-size: 2vw;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+    }
+  }
+}
