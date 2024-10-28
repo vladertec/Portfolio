@@ -4,7 +4,10 @@
   justify-content: space-between;
   gap: 5%;
   padding: 2% 5%;
-
+  position: sticky;
+  top: 0; 
+  background-color: black; 
+  z-index: 1000; 
 
   .photo-wrapper {
     width: 15%;
@@ -12,6 +15,7 @@
       width: 100%;
       max-width: 100%;
       height: auto;
+      border-radius: 20px;
       &:hover {
         opacity: 93%;
       }
@@ -31,6 +35,7 @@
     &__icon {
       :hover {
         fill: red;
+
       }
     }
   }

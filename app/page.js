@@ -1,17 +1,13 @@
-"use client";
+"use client"
 
-import Header from "./components/Header";
-import MainBody from "./components/MainBody";
-import Footer from "./components/Footer";
+import Body from "./components/Body"
 
 const Home = () => {
   return (
     <main>
-      <Header />
-      <MainBody />
-      <Footer />
+      <Body />
     </main>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

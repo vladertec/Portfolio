@@ -1,5 +1,7 @@
+import GitHubIcon from "@/public/svg/GitHubIcon"
 import InstagramIcon from "@/public/svg/InstagramIcon"
 import LinkedInIcon from "@/public/svg/LinkedInIcon"
+import TelegramIcon from "@/public/svg/TelegramIcon"
 
 const Header = () => {
   return (
@@ -7,7 +9,7 @@ const Header = () => {
       <div className="header__photo-container photo-wrapper">
         <img
           className="photo-wrapper__img"
-          src="/img/personal_photo.png"
+          src="/img/personal_photo.jpg"
           alt="Personal Photo"
         />
       </div>
@@ -18,7 +20,7 @@ const Header = () => {
           rel="noreferrer"
           href="#"
         >
-          <LinkedInIcon className="icons-wrapper__icon" />
+          <TelegramIcon className="icons-wrapper__icon" />
         </a>
         <a
           className="icons-wrapper__link"
@@ -34,7 +36,7 @@ const Header = () => {
           rel="noreferrer"
           href="#"
         >
-          <LinkedInIcon className="icons-wrapper__icon" />
+          <InstagramIcon className="icons-wrapper__icon" />
         </a>
         <a
           className="icons-wrapper__link"
@@ -42,7 +44,7 @@ const Header = () => {
           rel="noreferrer"
           href="#"
         >
-          <LinkedInIcon className="icons-wrapper__icon" />
+          <GitHubIcon className="icons-wrapper__icon" />
         </a>
       </div>
       <div className="header__btn-container btn-wrapper">
