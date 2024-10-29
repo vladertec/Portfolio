@@ -1,10 +1,9 @@
 .slider {
-margin-top: 5%;
-    width: 100%;
+  margin-top: 5%;
+  width: 100%;
   .slider-wrapper {
-    gap: 5%;
+    display: flex;
     .slide {
-        
       &__img {
         width: 100%;
         height: auto;
@@ -13,6 +12,7 @@ margin-top: 5%;
   }
 }
 
-.slick-prev, .slick-next {
-    display: none !important; /* Скрыть стрелки */
-  }
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
