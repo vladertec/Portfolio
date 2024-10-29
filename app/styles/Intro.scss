@@ -1,10 +1,12 @@
 .intro {
-  padding: 8% 5%;
+  padding: 6% 5%;
   color: white;
   background-color: black;
 
   .intro-wrapper {
     &__title {
+      color: $green-color;
+      font-size: 2vw;
     }
 
     &__name {
@@ -13,11 +15,16 @@
     }
     &__information {
       margin-top: 4%;
+      color: $grey-color;
+      text-align: justify;
+      line-height: 1.5;
+      font-size: 1.5vw;
     }
   }
 
   .info-wrapper {
     margin-top: 10%;
+    color: $grey-color;
     @include flex-container;
     justify-content: space-between;
     &__block {

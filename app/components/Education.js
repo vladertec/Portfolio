@@ -1,25 +1,31 @@
 const Education = () => {
   return (
     <div className="education">
-      <h2 className="education__title">Career</h2>
-      <p className="education__name">Education & Experience</p>
+      <h2 className="education__title">EDUCATION</h2>
       <div className="education__container education-wrapper">
-        <p className="education-wrapper__title">
-          O C T O B E R 2 0 2 3 — M A R C H 2 0 2 4
+        <p className="education-wrapper__title">October 2023 — March 2024</p>
+        <p className="education-wrapper__text">
+          Folkuniversitetet Course, Learning Swedish language, developing
+          professional skills, and adapting to the Swedish job market, Västerås.
         </p>
-        <p className="education-wrapper__text">Folkuniversitetet Course</p>
       </div>
       <div className="education__container education-wrapper">
         <p className="education-wrapper__title">
-          S E P T E M B E R 2 0 2 2 — F E B R U A R Y 2 0 2 4
+          September 2022 — February 2024
         </p>
-        <p className="education-wrapper__text">Master’s degree</p>
+        <p className="education-wrapper__text">
+          Master’s degree, National Technical University of Ukraine “Igor
+          Sikorsky Kyiv Polytechnic Institute” Faculty of Informatics and
+          Computer Science, Kyiv.
+        </p>
       </div>
       <div className="education__container education-wrapper">
-        <p className="education-wrapper__title">
-          S E P T E M B E R 2 0 1 8 — J U N E 2 0 2 2
+        <p className="education-wrapper__title">September 2018 — June 2022</p>
+        <p className="education-wrapper__text">
+          Bachelor's degree, National Technical University of Ukraine “Igor
+          Sikorsky Kyiv Polytechnic Institute” Faculty of Informatics and
+          Computer Science, Kyiv.
         </p>
-        <p className="education-wrapper__text">Bachelor's degree</p>
       </div>
     </div>
   )

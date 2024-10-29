@@ -9,7 +9,7 @@ const Main = () => {
       <Intro />
       <About />
       <Education />
-      {/* <Skills /> */}
+      <Skills />
     </main>
   )
 }

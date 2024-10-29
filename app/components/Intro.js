@@ -10,8 +10,7 @@ const Intro = () => {
         <h2 className="intro-wrapper__title">HELLO</h2>
         <p className="intro-wrapper__name">I'm Vladyslav, Web Developer</p>
         <p className="intro-wrapper__information">
-          I craft elegant solutions to complex problems, and I gives me
-          pleasure. I'm living in Berlin with my loving wife and cute daughter.
+        I create seamless user experiences through innovative web development, and I find joy in turning ideas into reality. Currently navigating my path in the tech world, I'm excited to embrace new challenges while continuously honing my skills.
         </p>
       </div>
 

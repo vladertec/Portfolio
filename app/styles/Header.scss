@@ -12,12 +12,12 @@
   .photo-wrapper {
     width: 15%;
     &__img {
-      width: 100%;
-      max-width: 100%;
+      width: 90%;
+      max-width: 90%;
       height: auto;
       border-radius: 20px;
       &:hover {
-        opacity: 93%;
+        opacity: 85%;
       }
     }
   }

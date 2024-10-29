@@ -2,9 +2,10 @@ import SkillsCarousel from "./SkillsCarousel"
 
 const Skills = () => {
   return (
-    <div>
-      <h2>My skills and knowledge</h2>
-      <SkillsCarousel />
+    <div className="skills">
+      <p className="skills__title">SKILLS</p>
+      <h2 className="skills__text">My skills and knowledge</h2>
+      {/* <SkillsCarousel className="skills__carousel" /> */}
     </div>
   )
 }

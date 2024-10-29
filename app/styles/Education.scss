@@ -1,15 +1,27 @@
 .education {
   background-color: black;
-  padding: 10% 5%;
+  padding: 5%;
+
   &__title {
     color: $green-color;
+    font-size: 2vw;
   }
 
   .education-wrapper {
-    &__text {
-    }
     &__title {
       color: $grey-color;
+      line-height: 1.7;
+      font-size: 1.3vw;
+      text-align: justify;
+      margin-top: 4%;
+    }
+    &__text {
+      font-size: 1.6vw;
+      text-align: justify;
+      line-height: 1.5;
+    }
+    &:hover {
+      opacity: 70%;
     }
   }
 }
