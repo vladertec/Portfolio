@@ -1,30 +1,49 @@
-import { Swiper, SwiperSlide } from "swiper/react"
+import React from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const SkillsCarousel = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, 
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000, 
+    cssEase: "linear",
+    prevArrow: null, 
+    nextArrow: null, 
+    // responsive: [
+    //   {
+    //     breakpoint: 750,
+    //     settings: {
+    //       slidesToShow: 2, 
+    //     },
+    //   },
+    // ],
+  }
+
   return (
-    <div>
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={3}
-        loop={true}
-        autoplay={{ delay: 2000 }}
-      >
-        <SwiperSlide>
-          <img src="/img/personal_photo.jpg" alt="Adobe" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/personal_photo.jpg" alt="Figma" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/personal_photo.jpg" alt="Blender" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/personal_photo.jpg" alt="Blender" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/personal_photo.jpg" alt="Blender" />
-        </SwiperSlide>
-      </Swiper>
+    <div className="slider">
+      <Slider {...settings} className="slider__container slider-wrapper">
+        <div className="slider-wrapper__part slide">
+          <img className="slide__img" src="/img/personal_photo.jpg" alt="Adobe" />
+        </div>
+        <div className="slider-wrapper__part slide">
+          <img className="slide__img" src="/img/personal_photo.jpg" alt="Adobe" />
+        </div>
+        <div className="slider-wrapper__part slide">
+          <img className="slide__img" src="/img/personal_photo.jpg" alt="Adobe" />
+        </div>
+        <div className="slider-wrapper__part slide">
+          <img className="slide__img" src="/img/personal_photo.jpg" alt="Adobe" />
+        </div>
+        <div className="slider-wrapper__part slide">
+          <img className="slide__img" src="/img/personal_photo.jpg" alt="Adobe" />
+        </div>
+      </Slider>
     </div>
   )
 }

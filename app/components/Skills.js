@@ -5,7 +5,7 @@ const Skills = () => {
     <div className="skills">
       <p className="skills__title">SKILLS</p>
       <h2 className="skills__text">My skills and knowledge</h2>
-      {/* <SkillsCarousel className="skills__carousel" /> */}
+      <SkillsCarousel className="skills__carousel" />
     </div>
   )
 }
