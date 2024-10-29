@@ -2,6 +2,7 @@ import LocationIcon from "@/public/svg/LocationIcon"
 import MailIcon from "@/public/svg/MailIcon"
 import PhoneIcon from "@/public/svg/PhoneIcon"
 
+
 const Intro = () => {
   return (
     <div className="intro">

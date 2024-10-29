@@ -1,0 +1,20 @@
+.about {
+  color: white;
+  padding: 10% 5%;
+  background-color: black;
+
+  &__title {
+    color: $green-color;
+  }
+
+  &__name {
+    margin-top: 3%;
+  }
+
+  &__information {
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+    margin-top: 3%;
+    color: $grey-color;
+  }
+}

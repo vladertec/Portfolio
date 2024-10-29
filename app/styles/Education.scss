@@ -1,0 +1,15 @@
+.education {
+  background-color: black;
+  padding: 10% 5%;
+  &__title {
+    color: $green-color;
+  }
+
+  .education-wrapper {
+    &__text {
+    }
+    &__title {
+      color: $grey-color;
+    }
+  }
+}

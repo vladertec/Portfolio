@@ -1,6 +1,7 @@
 .intro {
   padding: 8% 5%;
   color: white;
+  background-color: black;
 
   .intro-wrapper {
     &__title {
@@ -21,12 +22,10 @@
     justify-content: space-between;
     &__block {
       @include flex-container;
+      width: 25%;
     }
     &__icon {
-      width: 10%; /* Установите ширину в процентах */
-      max-width: 50px; /* Ограничьте максимальную ширину для больших экранов */
-      height: auto; /* Поддерживайте соотношение сторон */
-      margin-right: 10px;
+   
     }
     &__text {
     }
