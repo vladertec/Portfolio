@@ -2,10 +2,10 @@ import Link from "next/link"; // Import Link for navigation
 
 const Portfolio = () => {
   const projects = [
-    { id: 1, title: "Project One", image: "/img/project1.jpg" },
-    { id: 2, title: "Project Two", image: "/img/project2.jpg" },
-    { id: 3, title: "Project Three", image: "/img/project3.jpg" },
-    { id: 4, title: "Project Four", image: "/img/project4.jpg" }, // Add more projects as needed
+    { id: 1, title: "Project One", image: "/img/personal_photo.jpg" },
+    { id: 2, title: "Project Two", image: "/img/personal_photo.jpg" },
+    { id: 3, title: "Project Three", image: "/img/personal_photo.jpg" },
+    { id: 4, title: "Project Four", image: "/img/personal_photo.jpg" }, // Add more projects as needed
   ];
 
   return (
