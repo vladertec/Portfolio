@@ -16,6 +16,9 @@ const Education = () => {
           Folkuniversitetet Course, Learning Swedish language, developing
           professional skills, and adapting to the Swedish job market, Västerås.
         </p>
+        <p className="education-wrapper__text-mobile">
+          Swedish and english language, Folkuniversitetet.
+        </p>
       </div>
       <div className="education__container education-wrapper">
         <p className="education-wrapper__title">
@@ -26,12 +29,18 @@ const Education = () => {
           Sikorsky Kyiv Polytechnic Institute” Faculty of Informatics and
           Computer Science, Kyiv.
         </p>
+        <p className="education-wrapper__text-mobile">
+          Master’s degree of Information Technology.
+        </p>
       </div>
       <div className="education__container education-wrapper">
         <p className="education-wrapper__title">August 2021 — October 2022</p>
         <p className="education-wrapper__text">
           Comprehensive Frontend development program (also with Backend
           elements), reputable educational school DAN.IT, Kyiv.
+        </p>
+        <p className="education-wrapper__text-mobile">
+          Frontend Development Program, DAN.IT.
         </p>
       </div>
       <div className="education__container education-wrapper">
@@ -40,6 +49,9 @@ const Education = () => {
           Bachelor's degree, National Technical University of Ukraine “Igor
           Sikorsky Kyiv Polytechnic Institute” Faculty of Informatics and
           Computer Science, Kyiv.
+        </p>
+        <p className="education-wrapper__text-mobile">
+          Bachelor's degree of Information Technology.
         </p>
       </div>
     </div>

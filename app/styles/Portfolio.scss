@@ -5,6 +5,7 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
+
   &.visible {
     opacity: 1;
     transform: translateY(0);
@@ -32,10 +33,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin-top: 5%;
-
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
   }
 
   &__project {
@@ -72,6 +69,37 @@
 
     &:hover .project__overlay {
       opacity: 1;
+    }
+  }
+
+  @include phone {
+    &__title {
+      margin-top: 20%;
+      font-size: 5vw;
+    }
+
+    &__text {
+      margin-top: 9%;
+      line-height: 1.2;
+      font-size: 5.4vw;
+    }
+
+    &__projects {
+      margin-top: 9%;
+      padding: 0 2%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      grid-template-columns: 1fr;
+    }
+
+    .project__overlay {
+      .project__title {
+        color: white;
+        font-size: 5.5vw;
+        font-weight: 500;
+        text-align: center;
+      }
     }
   }
 }

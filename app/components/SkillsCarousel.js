@@ -15,14 +15,14 @@ const SkillsCarousel = () => {
     cssEase: "linear",
     prevArrow: null, 
     nextArrow: null, 
-    // responsive: [
-    //   {
-    //     breakpoint: 750,
-    //     settings: {
-    //       slidesToShow: 2, 
-    //     },
-    //   },
-    // ],
+    responsive: [
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 3, 
+        },
+      },
+    ],
   }
 
   return (

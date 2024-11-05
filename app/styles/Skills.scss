@@ -27,4 +27,19 @@
     margin-top: 4%;
     font-size: 2.9vw;
   }
+
+  @include phone {
+    padding: 8% 7%;
+
+    &__title {
+      margin-top: 20%;
+      font-size: 5vw;
+    }
+
+    &__text {
+      margin-top: 9%;
+      line-height: 1.2;
+      font-size: 5.4vw;
+    }
+  }
 }
