@@ -21,6 +21,13 @@ const Education = () => {
         </p>
       </div>
       <div className="education__container education-wrapper">
+        <p className="education-wrapper__title">August 2021 — October 2022</p>
+        <p className="education-wrapper__text">
+          Comprehensive Frontend development program (also with Backend
+          elements), reputable educational school DAN.IT, Kyiv.
+        </p>
+      </div>
+      <div className="education__container education-wrapper">
         <p className="education-wrapper__title">September 2018 — June 2022</p>
         <p className="education-wrapper__text">
           Bachelor's degree, National Technical University of Ukraine “Igor

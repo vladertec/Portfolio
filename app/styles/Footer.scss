@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  padding: 1.6% 0;
+  @include flex-container;
+  background-color: #0f0e0e;
+
+  &__text {
+    font-size: 0.9vw;
+    color: white;
+
+  }
+
+  &__name {
+    font-size: 0.9vw;
+    cursor: pointer;
+    color: $green-color;
+    &:hover {
+      border-bottom: 1px solid $green-color;
+      opacity: 75%;
+    }
+  }
+}

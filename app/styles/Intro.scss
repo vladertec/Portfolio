@@ -12,6 +12,7 @@
     &__name {
       margin-top: 3%;
       font-size: 5vw;
+      font-weight: 300;
     }
     &__information {
       margin-top: 4%;
@@ -23,18 +24,28 @@
   }
 
   .info-wrapper {
-    margin-top: 10%;
+    margin-top: 9%;
+    width: 100%;
     color: $grey-color;
     @include flex-container;
     justify-content: space-between;
+
     &__block {
       @include flex-container;
-      width: 25%;
+      &:hover{
+        opacity: 80%;
+      }
     }
+
     &__icon {
-   
+      width: 9%;
+      height: auto;
+      color: $grey-color;
     }
     &__text {
+      margin-left: 2%;
+      color: $grey-color;
+      font-size: 1.5vw;
     }
   }
 }
