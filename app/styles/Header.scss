@@ -66,4 +66,48 @@
       }
     }
   }
+
+  @include phone {
+    padding: 4% 7%;
+    display: grid;
+    grid-template-areas:
+      "photo photo button button button"
+      "icons icons icons icons icons";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 15px;
+
+    .photo-wrapper {
+      grid-area: photo;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-wrapper {
+      grid-area: button;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      &__btn {
+        font-size: 4.5vw;
+        padding: 11% 3%;
+        border-radius: 12px;
+      }
+    }
+
+    .icons-wrapper {
+      grid-area: icons;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+
+      &__link {
+        width: 10%;
+        height: auto;
+      } 
+    }
+  }
 }

@@ -24,13 +24,13 @@ const Intro = () => {
       </div>
 
       <div className="intro__info-container info-wrapper">
-        <div className="info-wrapper__block">
+        <div className="info-wrapper__block info-wrapper__first-block ">
           <PhoneIcon className="info-wrapper__icon" />
           <a className="info-wrapper__text" href="tel:+46700638143">
             +46 70-063 81 43
           </a>
         </div>
-        <div className="info-wrapper__block">
+        <div className="info-wrapper__block info-wrapper__second-block">
           <LocationIcon className="info-wrapper__icon" />
           <a
             className="info-wrapper__text"
@@ -41,7 +41,7 @@ const Intro = () => {
             Stockholm, Sweden
           </a>
         </div>
-        <div className="info-wrapper__block">
+        <div className="info-wrapper__block info-wrapper__third-block">
           <MailIcon className="info-wrapper__icon" />
           <a
             className="info-wrapper__text"

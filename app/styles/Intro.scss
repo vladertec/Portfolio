@@ -28,6 +28,7 @@
         opacity: 85%;
       }
     }
+
     &__information {
       margin-top: 4%;
       color: $grey-color;
@@ -63,6 +64,62 @@
       margin-left: 2%;
       color: $grey-color;
       font-size: 1.5vw;
+    }
+  }
+
+  @include phone {
+    padding: 8% 7%;
+
+    .intro-wrapper {
+      &__title {
+        margin-top: 4%;
+        font-size: 5vw;
+      }
+
+      &__name {
+        margin-top: 9%;
+        line-height: 1.2;
+        font-size: 11vw;
+      }
+
+      &__information {
+        margin-top: 9%;
+        font-size: 3.7vw;
+        line-height: 1.3;
+      }
+    }
+
+    .info-wrapper {
+      margin-top: 15%;
+      display: grid;
+      grid-template-areas:
+        "location location number number"
+        ". email email .";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      align-items: center;
+      gap: 15px;
+      &__first-block {
+        grid-area: location;
+      }
+      &__second-block {
+        grid-area: number;
+      }
+      &__third-block {
+        grid-area: email;
+        display: flex;
+        align-items: center;
+      }
+
+      &__block {
+      }
+
+      &__icon {
+        width: 12%;
+      }
+      &__text {
+        font-size: 3.7vw;
+      }
     }
   }
 }
