@@ -2,15 +2,29 @@
   color: white;
   padding: 10% 5%;
   background-color: black;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   &__title {
     color: $green-color;
     font-size: 2vw;
+    &:hover {
+      opacity: 85%;
+    }
   }
 
   &__name {
     margin-top: 3%;
     font-size: 2.9vw;
+    &:hover {
+      opacity: 85%;
+    }
   }
 
   &__information {
@@ -19,5 +33,8 @@
     text-align: justify;
     margin-top: 3.5%;
     color: $grey-color;
+    &:hover {
+      opacity: 85%;
+    }
   }
 }

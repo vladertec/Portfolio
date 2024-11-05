@@ -1,8 +1,15 @@
+import { useInView } from "react-intersection-observer"
+
 const Education = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  })
+
   return (
-    <div className="education">
+    <div ref={ref} className={`education ${inView ? "visible" : ""}`}>
       <h2 className="education__title">EDUCATION</h2>
-      <h2 className="education__text"> University & Course</h2>
+      <h2 className="education__text">University & Course</h2>
       <div className="education__container education-wrapper">
         <p className="education-wrapper__title">October 2023 — March 2024</p>
         <p className="education-wrapper__text">

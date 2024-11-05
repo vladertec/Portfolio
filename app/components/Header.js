@@ -18,7 +18,7 @@ const Header = () => {
           className="icons-wrapper__link"
           target="_blank"
           rel="noreferrer"
-          href="#"
+          href="https://t.me/vladertec"
         >
           <TelegramIcon className="icons-wrapper__icon" />
         </a>
@@ -26,7 +26,7 @@ const Header = () => {
           className="icons-wrapper__link"
           target="_blank"
           rel="noreferrer"
-          href="#"
+          href="https://www.linkedin.com/in/vladertec/"
         >
           <LinkedInIcon className="icons-wrapper__icon" />
         </a>
@@ -34,7 +34,7 @@ const Header = () => {
           className="icons-wrapper__link"
           target="_blank"
           rel="noreferrer"
-          href="#"
+          href="https://www.instagram.com/vladertec/"
         >
           <InstagramIcon className="icons-wrapper__icon" />
         </a>
@@ -42,13 +42,13 @@ const Header = () => {
           className="icons-wrapper__link"
           target="_blank"
           rel="noreferrer"
-          href="#"
+          href="https://github.com/vladertec"
         >
           <GitHubIcon className="icons-wrapper__icon" />
         </a>
       </div>
       <div className="header__btn-container btn-wrapper">
-        <button className="btn-wrapper__btn">Write me</button>
+        <button className="btn-wrapper__btn">WRITE ME</button>
       </div>
     </header>
   )

@@ -1,15 +1,30 @@
 .education {
   background-color: black;
   padding: 5%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  color: white;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   &__title {
     color: $green-color;
     font-size: 2vw;
+    &:hover {
+      opacity: 85%;
+    }
   }
 
-  &__text{
+  &__text {
     margin-top: 3%;
     font-size: 2.9vw;
+    &:hover {
+      opacity: 85%;
+    }
   }
 
   .education-wrapper {
@@ -20,11 +35,13 @@
       text-align: justify;
       margin-top: 3.5%;
     }
+
     &__text {
       font-size: 1.6vw;
       text-align: justify;
       line-height: 1.5;
     }
+
     &:hover {
       opacity: 70%;
     }

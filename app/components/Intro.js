@@ -1,10 +1,17 @@
+import React from "react"
+import { useInView } from "react-intersection-observer"
 import LocationIcon from "@/public/svg/LocationIcon"
 import MailIcon from "@/public/svg/MailIcon"
 import PhoneIcon from "@/public/svg/PhoneIcon"
 
 const Intro = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.1, 
+    triggerOnce: true, 
+  })
+
   return (
-    <div className="intro">
+    <div ref={ref} className={`intro ${inView ? "visible" : ""}`}>
       <div className="intro__text-container intro-wrapper">
         <h2 className="intro-wrapper__title">HELLO</h2>
         <p className="intro-wrapper__name">I'm Vladyslav, Web Developer</p>
@@ -19,15 +26,29 @@ const Intro = () => {
       <div className="intro__info-container info-wrapper">
         <div className="info-wrapper__block">
           <PhoneIcon className="info-wrapper__icon" />
-          <p className="info-wrapper__text">+46 70-063 81 43</p>
+          <a className="info-wrapper__text" href="tel:+46700638143">
+            +46 70-063 81 43
+          </a>
         </div>
         <div className="info-wrapper__block">
           <LocationIcon className="info-wrapper__icon" />
-          <p className="info-wrapper__text">Stockholm, Sweden</p>
+          <a
+            className="info-wrapper__text"
+            href="https://www.google.com/maps/search/?api=1&query=Stockholm,+Sweden"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Stockholm, Sweden
+          </a>
         </div>
         <div className="info-wrapper__block">
           <MailIcon className="info-wrapper__icon" />
-          <p className="info-wrapper__text">sarnavsk2001@gmail.com</p>
+          <a
+            className="info-wrapper__text"
+            href="mailto:sarnavsk2001@gmail.com"
+          >
+            sarnavsk2001@gmail.com
+          </a>
         </div>
       </div>
     </div>
