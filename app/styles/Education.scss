@@ -52,6 +52,7 @@
   }
 
   @include phone {
+
     padding: 8% 7%;
 
     &__title {
@@ -81,5 +82,8 @@
         font-size: 3.7vw;
       }
     }
-  }
+  
 }
+}
+
+

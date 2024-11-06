@@ -48,7 +48,7 @@ const Header = () => {
         </a>
       </div>
       <div className="header__btn-container btn-wrapper">
-        <button className="btn-wrapper__btn">WRITE ME</button>
+        <button className="btn-wrapper__btn">MESSAGE ME</button>
       </div>
     </header>
   )
