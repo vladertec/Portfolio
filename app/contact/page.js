@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer"
 import { useState } from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
+import emailjs from "emailjs-com"
 
 const ContactPage = () => {
   const { ref, inView } = useInView({
@@ -26,15 +27,18 @@ const ContactPage = () => {
     setStatus("Sending...")
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const result = await emailjs.send(
+        "service_a7nlbge",
+        "template_a21vh6v",
+        {
+          name: "vlad",
+          email: "sarnavsk2001@gmail.com",
+          message: `You have new message from portfolio website. User name - ${values.name}, user email - ${values.email}, user text - ${values.message}, user mobile phone - ${values.phone}, name - ${values.name}. Have a good day!`,
         },
-        body: JSON.stringify(values),
-      })
+        "b-9jRpofu0_GJSdEI"
+      )
 
-      if (res.ok) {
+      if (result.status === 200) {
         setStatus("Message sent successfully!")
         resetForm()
       } else {
