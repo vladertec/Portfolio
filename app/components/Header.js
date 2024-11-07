@@ -2,6 +2,7 @@ import GitHubIcon from "@/public/svg/GitHubIcon"
 import InstagramIcon from "@/public/svg/InstagramIcon"
 import LinkedInIcon from "@/public/svg/LinkedInIcon"
 import TelegramIcon from "@/public/svg/TelegramIcon"
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -48,7 +49,9 @@ const Header = () => {
         </a>
       </div>
       <div className="header__btn-container btn-wrapper">
-        <button className="btn-wrapper__btn">MESSAGE ME</button>
+        <Link href="/contact">
+          <button className="btn-wrapper__btn">MESSAGE ME</button>
+        </Link>
       </div>
     </header>
   )
