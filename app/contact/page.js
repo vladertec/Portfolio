@@ -1,58 +1,29 @@
-"use client";
+"use client"
 
-import { useInView } from "react-intersection-observer";
-import { useState } from "react";
+import { useInView } from "react-intersection-observer"
+import { useState } from "react"
+import { Formik, Form, Field, ErrorMessage } from "formik"
+import * as Yup from "yup"
 
 const ContactPage = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
-  });
+  })
 
-  const [status, setStatus] = useState("");
-  const [formValues, setFormValues] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  const [status, setStatus] = useState("")
 
-  const [errors, setErrors] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Name is required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    phone: Yup.string().required("Phone number is required"),
+    message: Yup.string().required("Message is required"),
+  })
 
-  const handleChange = (e) => {
-    setFormValues({
-      ...formValues,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const validateForm = () => {
-    const newErrors = {};
-
-    if (!formValues.name) newErrors.name = "Name is required";
-    if (!formValues.email) newErrors.email = "Email is required";
-    else if (!/\S+@\S+\.\S+/.test(formValues.email))
-      newErrors.email = "Invalid email address";
-
-    if (!formValues.phone) newErrors.phone = "Phone number is required";
-    if (!formValues.message) newErrors.message = "Message is required";
-
-    setErrors(newErrors);
-
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!validateForm()) return;
-
-    setStatus("Sending...");
+  const handleSubmit = async (values, { resetForm }) => {
+    setStatus("Sending...")
 
     try {
       const res = await fetch("/api/contact", {
@@ -60,74 +31,94 @@ const ContactPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formValues),
-      });
+        body: JSON.stringify(values),
+      })
 
       if (res.ok) {
-        setStatus("Message sent successfully!");
-        setFormValues({ name: "", email: "", phone: "", message: "" });
+        setStatus("Message sent successfully!")
+        resetForm()
       } else {
-        setStatus("Error sending message.");
+        setStatus("Error sending message.")
       }
     } catch (error) {
-      setStatus("Error sending message.");
+      setStatus("Error sending message.")
     }
-  };
+  }
 
   return (
     <div ref={ref} className={`contact ${inView ? "visible" : ""}`}>
       <h1 className="contact__title">SEND ME MESSAGE</h1>
-      <form className="contact__form" onSubmit={handleSubmit}>
-        <div className="contact__field contact__field--name">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            className="contact__input"
-            value={formValues.name}
-            onChange={handleChange}
-          />
-          {errors.name && <div className="contact__error">{errors.name}</div>}
-        </div>
-        <div className="contact__field contact__field--email">
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            className="contact__input"
-            value={formValues.email}
-            onChange={handleChange}
-          />
-          {errors.email && <div className="contact__error">{errors.email}</div>}
-        </div>
-        <div className="contact__field contact__field--phone">
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Your Phone"
-            className="contact__input"
-            value={formValues.phone}
-            onChange={handleChange}
-          />
-          {errors.phone && <div className="contact__error">{errors.phone}</div>}
-        </div>
-        <div className="contact__field contact__field--message">
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            className="contact__input contact__input--textarea"
-            value={formValues.message}
-            onChange={handleChange}
-          />
-          {errors.message && <div className="contact__error">{errors.message}</div>}
-        </div>
-        <button type="submit" className="contact__button">
-          SEND MESSAGE
-        </button>
-      </form>
+      <Formik
+        initialValues={{
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        }}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        <Form className="contact__form">
+          <div className="contact__field contact__field--name">
+            <Field
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              className="contact__input"
+            />
+            <ErrorMessage
+              name="name"
+              component="div"
+              className="contact__error"
+            />
+          </div>
+          <div className="contact__field contact__field--email">
+            <Field
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              className="contact__input"
+            />
+            <ErrorMessage
+              name="email"
+              component="div"
+              className="contact__error"
+            />
+          </div>
+          <div className="contact__field contact__field--phone">
+            <Field
+              type="tel"
+              name="phone"
+              placeholder="Your Phone"
+              className="contact__input"
+            />
+            <ErrorMessage
+              name="phone"
+              component="div"
+              className="contact__error"
+            />
+          </div>
+          <div className="contact__field contact__field--message">
+            <Field
+              as="textarea"
+              name="message"
+              placeholder="Your Message"
+              className="contact__input contact__input--textarea"
+            />
+            <ErrorMessage
+              name="message"
+              component="div"
+              className="contact__error"
+            />
+          </div>
+          <button type="submit" className="contact__button">
+            SEND MESSAGE
+          </button>
+        </Form>
+      </Formik>
       <p className="contact__status">{status}</p>
     </div>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage
