@@ -9,7 +9,7 @@ const projects = [
   {
     id: 1,
     title: "Barbershop Information System",
-    image: "/img/barbershop_image.jpg", // Путь к изображению проекта
+    image: "/img/barbershop_image.jpg", 
     description:
       "A comprehensive system for managing barbershop appointments, client records, and staff schedules. It provides an intuitive user interface for clients and powerful admin tools for barbershop owners.",
     technologies: [
@@ -59,7 +59,7 @@ const projects = [
   {
     id: 2,
     title: "NaVarti",
-    image: "/img/na_varti_image.jpg", // Путь к изображению проекта
+    image: "/img/na_varti_image.jpg", 
     description:
       "NaVarti is a mobile app designed for citizens to report and track public service issues like damaged roads, broken street lights, and garbage collection. It empowers users to communicate directly with local authorities and monitor progress on their reports.",
     technologies: [

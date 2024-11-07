@@ -1,72 +1,72 @@
-// .project-detail {
-//   opacity: 0;
-//   transform: translateY(20px);
-//   transition: opacity 1s ease, transform 1s ease;
-//   color: #fff;
-//   padding: 20px;
+.project-detail {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  color: #fff;
+  padding: 20px;
 
-//   &.visible {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-//   &__title {
-//     font-size: 2rem;
-//     margin-bottom: 20px;
-//   }
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
 
-//   &__image-container {
-//     margin-bottom: 20px;
-//   }
+  &__image-container {
+    margin-bottom: 20px;
+  }
 
-//   &__image {
-//     width: 100%;
-//     height: auto;
-//     border-radius: 8px;
-//   }
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
 
-//   &__description {
-//     font-size: 1.2rem;
-//     line-height: 1.5;
-//     margin-bottom: 20px;
-//   }
+  &__description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
 
-//   &__subtitle {
-//     font-size: 1.5rem;
-//     margin-top: 20px;
-//     margin-bottom: 10px;
-//   }
+  &__subtitle {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 
-//   &__tech-list,
-//   &__features-list,
-//   &__challenges-list,
-//   &__achievements-list {
-//     list-style: none;
-//     padding: 0;
-//   }
+  &__tech-list,
+  &__features-list,
+  &__challenges-list,
+  &__achievements-list {
+    list-style: none;
+    padding: 0;
+  }
 
-//   &__tech-item,
-//   &__feature-item,
-//   &__challenge-item,
-//   &__achievement-item {
-//     margin-bottom: 10px;
-//     font-size: 1rem;
-//   }
+  &__tech-item,
+  &__feature-item,
+  &__challenge-item,
+  &__achievement-item {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
 
-//   &__link {
-//     display: inline-block;
-//     margin-top: 20px;
-//     padding: 10px 20px;
-//     background-color: #0070f3;
-//     color: #fff;
-//     text-decoration: none;
-//     border-radius: 5px;
-//     transition: background-color 0.3s;
+  &__link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 
-//     &:hover {
-//       background-color: #005bb5;
-//     }
-//   }
-// }
+    &:hover {
+      background-color: #005bb5;
+    }
+  }
+}
 
 
