@@ -44,11 +44,12 @@
     width: 100%;
     padding: 1.5vh 1vw;
     font-size: 1.8vw;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    border: 2.5px solid #ccc;
+    border-radius: 10px;
 
     &:focus {
-      border-color: $green-color;
+      border-color: $green-color;  // Добавляем зелёный бордер при фокусе
+      outline: none;
     }
 
     &--textarea {
@@ -107,6 +108,7 @@
       margin-top: 3%;
       padding: 2vh 1vw;
       font-size: 3.5vw;
+      border-radius: 13px;
     }
 
     &__error {
