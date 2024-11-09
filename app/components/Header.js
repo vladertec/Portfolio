@@ -50,7 +50,7 @@ const Header = () => {
       </div>
       <div className="header__btn-container btn-wrapper">
         <Link href="/contact">
-          <button className="btn-wrapper__btn">MESSAGE ME</button>
+          <button className="btn-wrapper__btn">TEXT ME</button>
         </Link>
       </div>
     </header>

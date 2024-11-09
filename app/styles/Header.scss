@@ -91,12 +91,12 @@
     .btn-wrapper {
       grid-area: button;
       width: 100%;
-      display: flex;
-      justify-content: center;
+    
       &__btn {
         font-size: 4.5vw;
-        padding: 11% 3%;
+        padding: 11% 6%;
         border-radius: 12px;
+        font-weight: 550;
       }
     }
 

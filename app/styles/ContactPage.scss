@@ -94,7 +94,7 @@
   }
 
   @include phone {
-    padding: 7% 12%;
+    padding: 18% 12%;
 
     &__title {
       margin-top: 4%;
@@ -121,6 +121,7 @@
       margin-top: 6%;
       border-radius: 15px;
       font-size: 3.2vw;
+      font-weight: 550;
     }
 
     &__status {
