@@ -125,7 +125,7 @@ const ProjectDetail = () => {
   return (
     <div ref={ref} className={`project-detail ${inView ? "visible" : ""}`}>
       <h1 className="project-detail__title">{project.title}</h1>
-      <div className="project-detail__image-container">
+      {/* <div className="project-detail__image-container">
         <Image
           className="project-detail__image"
           src={project.image}
@@ -133,7 +133,7 @@ const ProjectDetail = () => {
           width={600}
           height={400}
         />
-      </div>
+      </div> */}
       <p className="project-detail__description">{project.description}</p>
 
       <h3 className="project-detail__subtitle">Technologies Used:</h3>
