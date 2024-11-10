@@ -48,7 +48,7 @@
     border-radius: 10px;
 
     &:focus {
-      border-color: $green-color;  // Добавляем зелёный бордер при фокусе
+      border-color: $green-color;  
       outline: none;
     }
 
@@ -99,9 +99,10 @@
 
     &__title {
       margin-top: 4%;
-      font-size: 5vw;
+      font-size: 5.5vw;
       margin-bottom: 3vh;
       color: $green-color;
+      font-weight: 550;
     }
 
     &__input {

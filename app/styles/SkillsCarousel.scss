@@ -15,14 +15,14 @@
     }
   }
 
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+
   @include phone {
     .slider-wrapper {
       margin-top: 9%;
     }
   }
-}
-
-.slick-prev,
-.slick-next {
-  display: none !important;
 }
