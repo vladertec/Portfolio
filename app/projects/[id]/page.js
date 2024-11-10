@@ -50,7 +50,7 @@ const projects = [
       { name: "Sass", link: "https://sass-lang.com/" },
       { name: "Figma", link: "https://www.figma.com/" },
     ],
-    role: "Lead Developer – As a Full-Stack Developer, I am responsible for both the frontend and backend development of the project. This includes setting up and managing the non-relational database, implementing server-side logic, and ensuring efficient API integrations. On the frontend, I work with modern technologies like React, Redux, and Material-UI to build responsive and dynamic user interfaces. I also handle data storage and retrieval with MongoDB, ensuring that the backend efficiently interacts with the database for optimal performance and scalability. Additionally, I focus on ensuring smooth user authentication, implementing secure token-based systems with JWT, and optimizing the overall system for both functionality and performance.",
+    role: "Lead Developer – as a Full-Stack Developer, I am responsible for both the frontend and backend development of the project. This includes setting up and managing the non-relational database, implementing server-side logic, and ensuring efficient API integrations. On the frontend, I work with modern technologies like React, Redux, and Material-UI to build responsive and dynamic user interfaces. I also handle data storage and retrieval with MongoDB, ensuring that the backend efficiently interacts with the database for optimal performance and scalability. Additionally, I focus on ensuring smooth user authentication, implementing secure token-based systems with JWT, and optimizing the overall system for both functionality and performance.",
     features: [
       {
         title: "Client Registration",
@@ -123,6 +123,78 @@ const projects = [
           "managers can send targeted notifications, such as promotions, news, or updates, keeping clients engaged and informed about relevant activities at the barbershop.",
       },
     ],
+    featuresMobile: [
+      {
+        title: "Client Registration",
+        description:
+          "clients register to join the database and access bookings, updates, and personalized services.",
+      },
+      {
+        title: "Authorization",
+        description:
+          "secure login grants clients access to track appointments, manage cart, and save favorites.",
+      },
+      {
+        title: "Barber Registration",
+        description:
+          "only managers can register new barbers, assigning them to services.",
+      },
+      {
+        title: "Appointment Scheduling",
+        description:
+          "clients book appointments by choosing service, barber, and available time online.",
+      },
+      {
+        title: "Product Sales",
+        description:
+          "clients browse and buy grooming products, with secure payment and delivery options.",
+      },
+      {
+        title: "News Updates",
+        description:
+          "managers share news and promotions, keeping clients informed about offers.",
+      },
+      {
+        title: "Feedback",
+        description:
+          "clients provide feedback, which managers review to improve services.",
+      },
+      {
+        title: "Barber's Schedule",
+        description:
+          "barbers check their schedules and appointment details on their dashboard.",
+      },
+      {
+        title: "Information Update",
+        description:
+          "easy profile updates for clients and barbers to keep information current.",
+      },
+      {
+        title: "Favorites",
+        description:
+          "clients save preferred products and services to a favorites section.",
+      },
+      {
+        title: "Appointment Cancellation",
+        description:
+          "clients can cancel or reschedule appointments for added flexibility.",
+      },
+      {
+        title: "Online Appointment Management",
+        description:
+          "managers organize bookings, adjusting based on service popularity.",
+      },
+      {
+        title: "Sales Analytics",
+        description:
+          "managers view detailed sales and client order reports for inventory insights.",
+      },
+      {
+        title: "Client Notifications",
+        description:
+          "managers send promotions and updates, keeping clients engaged.",
+      },
+    ],
 
     achievements: [
       "Increased customer engagement by 30% due to the easy-to-use online booking system, making it convenient for clients to schedule their appointments at any time.",
@@ -138,6 +210,22 @@ const projects = [
       "News and updates section that informs clients about the latest trends in the beauty industry, barbershop promotions, and any new services or products available.",
       "Possibility for clients to purchase specialized grooming products directly through the platform, providing a convenient and seamless shopping experience.",
       "Responsiveness and mobile-friendliness, ensuring that the website delivers a seamless experience across different devices, making it accessible and easy to use on smartphones and tablets.",
+    ],
+
+    achievementsMobile: [
+      "Increased customer engagement by 30% with a simple online booking system for convenient scheduling.",
+      "Reduced admin tasks for barbershop owners by automating appointment management, focusing efforts on service.",
+      "Modern design provides an intuitive and appealing user experience for a professional, welcoming feel.",
+      "Enhanced system speed and scalability to handle growing client and booking volume effortlessly.",
+      "Content-rich homepage gives visitors key info on services, promotions, and updates at a glance.",
+      "User-friendly interface is easy for all users, ensuring smooth navigation throughout the site.",
+      "Automation in booking and purchases cuts down on time clients spend on admin tasks.",
+      "Secure user authentication for clients, barbers, and managers, with tailored access for each role.",
+      "Detailed service info, including descriptions and pricing, helps clients make booking choices.",
+      "Comprehensive photo gallery showcases the barbershop's work, helping clients make informed decisions.",
+      "News section keeps clients updated on trends, barbershop promos, and new services or products.",
+      "Clients can buy grooming products directly on the platform for a convenient shopping experience.",
+      "Responsive, mobile-friendly design ensures seamless access across devices.",
     ],
 
     githubLink: "https://github.com/vladertec/Barbershop_information_system",
@@ -229,7 +317,7 @@ const ProjectDetail = () => {
       <h3 className="project-detail__subtitle">My Role</h3>
       <p className="project-detail__description">{project.role}</p>
 
-      <h3 className="project-detail__subtitle">Key Features:</h3>
+      <h3 className="project-detail__subtitle">Key Features</h3>
       <ul className="project-detail__features-list">
         {project.features.map((feature, index) => (
           <li key={index} className="project-detail__feature-item">
@@ -242,12 +330,33 @@ const ProjectDetail = () => {
         ))}
       </ul>
 
-      <h3 className="project-detail__subtitle">Achievements:</h3>
+      <ul className="project-detail__features-list project-detail__features-list--mobile">
+        {project.featuresMobile.map((feature, index) => (
+          <li key={index} className="project-detail__feature-item">
+            <span className="project-detail__feature-dot"></span>
+            <strong className="project-detail__feature-name">
+              {feature.title}
+            </strong>
+            : {feature.description}
+          </li>
+        ))}
+      </ul>
+
+      <h3 className="project-detail__subtitle">Achievements</h3>
 
       <ul className="project-detail__achievement-list">
         {project.achievements.map((achievement, index) => (
           <li key={index} className="project-detail__achievement-item">
-             <span className="project-detail__achievement-dot"></span>
+            <span className="project-detail__achievement-dot"></span>
+            {achievement}
+          </li>
+        ))}
+      </ul>
+
+      <ul className="project-detail__achievement-list project-detail__achievement-list--mobile">
+        {project.achievementsMobile.map((achievement, index) => (
+          <li key={index} className="project-detail__achievement-item">
+            <span className="project-detail__achievement-dot"></span>
             {achievement}
           </li>
         ))}
