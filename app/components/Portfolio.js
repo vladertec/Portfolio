@@ -1,16 +1,20 @@
-import Link from "next/link";
-import { useInView } from "react-intersection-observer";
+import Link from "next/link"
+import { useInView } from "react-intersection-observer"
 
 const Portfolio = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
-  });
+  })
 
   const projects = [
-    { id: 1, title: "Project One", image: "/img/personal_photo.jpg" },
-    { id: 2, title: "Project Two", image: "/img/personal_photo.jpg" },
-  ];
+    { id: 1, title: "Barber project", image: "/img/project_1/1.png" },
+    {
+      id: 2,
+      title: "Charity foundation project",
+      image: "/img/project_2/1.png",
+    },
+  ]
 
   return (
     <div ref={ref} className={`portfolio ${inView ? "visible" : ""}`}>
@@ -33,7 +37,7 @@ const Portfolio = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio
