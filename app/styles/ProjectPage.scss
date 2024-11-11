@@ -57,10 +57,6 @@
       color: $green-color;
       font-size: 3vw;
     }
-
-    .slick-next {
-      right: -6.2%;
-  }
   }
 
   &__subtitle {
@@ -252,6 +248,10 @@
       .slick-prev:before,
       .slick-next:before {
         font-size: 6.5vw;
+      }
+
+      .slick-next {
+        right: -6.2%;
       }
     }
 
