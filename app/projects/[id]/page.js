@@ -375,7 +375,7 @@ const ProjectDetail = () => {
   }
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 900,
     slidesToShow: 1,

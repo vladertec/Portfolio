@@ -1,7 +1,7 @@
 .portfolio {
   background-color: black;
   width: 100%;
-  padding: 8% 5%;
+  padding: 8% 5% 15% 5%;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
@@ -73,7 +73,8 @@
   }
 
   @include phone {
-    padding: 8% 7%;
+    padding: 8% 7% 20% 7%;
+
     
     &__title {
       margin-top: 20%;
@@ -106,6 +107,6 @@
   }
 
   @include desktop {
-    padding: 9% 8%;
+    padding: 9% 8% 15% 8%;
   }
 }

@@ -1,6 +1,5 @@
 .footer {
   width: 100%;
-  margin-top: 6%;
   padding: 1.6% 0;
   @include flex-container;
   flex-direction: column;
@@ -46,7 +45,6 @@
   }
 
   @include phone {
-    margin-top: 9%;
     padding: 3.5% 0;
 
     &__nav {
