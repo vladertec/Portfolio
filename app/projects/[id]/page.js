@@ -377,11 +377,11 @@ const ProjectDetail = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 900,
+    speed: 700,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 100000,
+    autoplaySpeed: 10000000,
     cssEase: "linear",
     prevArrow: null,
     nextArrow: null,
