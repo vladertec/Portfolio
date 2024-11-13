@@ -73,6 +73,8 @@
   }
 
   @include phone {
+    padding: 8% 7%;
+    
     &__title {
       margin-top: 20%;
       font-size: 5vw;
@@ -101,5 +103,9 @@
         text-align: center;
       }
     }
+  }
+
+  @include desktop {
+    padding: 9% 8%;
   }
 }

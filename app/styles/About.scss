@@ -20,6 +20,8 @@
   }
 
   &__name {
+    text-align: justify;
+    line-height: 1.4;
     margin-top: 3%;
     font-size: 2.9vw;
     &:hover {
@@ -68,5 +70,9 @@
     &__information-mobile {
       display: block;
     }
+  }
+
+  @include desktop {
+    padding: 9% 8%;
   }
 }

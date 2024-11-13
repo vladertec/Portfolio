@@ -9,7 +9,7 @@ const Education = () => {
   return (
     <div ref={ref} className={`education ${inView ? "visible" : ""}`}>
       <h2 className="education__title">EDUCATION</h2>
-      <h2 className="education__text">University & Course</h2>
+      <h2 className="education__text">University & Studies</h2>
       <div className="education__container education-wrapper">
         <p className="education-wrapper__title">October 2023 — March 2024</p>
         <p className="education-wrapper__text">
@@ -45,12 +45,12 @@ const Education = () => {
       </div>
       <div className="education__container education-wrapper">
         <p className="education-wrapper__title">September 2018 — June 2022</p>
-        <p className="education-wrapper__text">
+        <p className="education-wrapper__text" id="skills">
           Bachelor's degree, National Technical University of Ukraine “Igor
           Sikorsky Kyiv Polytechnic Institute” Faculty of Informatics and
           Computer Science, Kyiv.
         </p>
-        <p className="education-wrapper__text-mobile">
+        <p className="education-wrapper__text-mobile" id="skills">
           Bachelor's degree of Information Technology.
         </p>
       </div>

@@ -4,11 +4,10 @@ import Main from "./Main"
 
 const Body = () => {
   return (
-    <div className="body">
+    <div className="body" id="intro">
       <Header />
       <Main />
       <Footer />
-
     </div>
   )
 }

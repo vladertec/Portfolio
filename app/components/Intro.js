@@ -11,7 +11,7 @@ const Intro = () => {
   })
 
   return (
-    <div ref={ref} className={`intro ${inView ? "visible" : ""}`}>
+    <div ref={ref}  className={`intro ${inView ? "visible" : ""}`}>
       <div className="intro__text-container intro-wrapper">
         <h2 className="intro-wrapper__title">HELLO</h2>
         <p className="intro-wrapper__name">I'm Vladyslav, Web Developer</p>
@@ -23,7 +23,7 @@ const Intro = () => {
         </p>
       </div>
 
-      <div className="intro__info-container info-wrapper">
+      <div className="intro__info-container info-wrapper" id="about" >
         <div className="info-wrapper__block info-wrapper__first-block ">
           <PhoneIcon className="info-wrapper__icon" />
           <a className="info-wrapper__text" href="tel:+46700638143">

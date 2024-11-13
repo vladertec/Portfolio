@@ -42,4 +42,8 @@
       font-size: 5.4vw;
     }
   }
+
+  @include desktop {
+    padding: 9% 8%;
+  }
 }

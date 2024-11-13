@@ -15,6 +15,12 @@
   padding-right: 5%;
 }
 
+@mixin desktop {
+  @media (min-width: $large-desktop-width) {
+    @content;
+  }
+}
+
 @mixin phone {
   @media (min-width: #{$mobile-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;

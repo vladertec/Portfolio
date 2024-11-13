@@ -7,6 +7,7 @@ import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import Footer from "@/app/components/Footer"
 
 const projects = [
   {
@@ -246,6 +247,7 @@ const projects = [
     ],
 
     githubLink: "https://github.com/vladertec/Barbershop_information_system",
+    deployLink: "https://github.com/vladertec/Barbershop_information_system",
   },
   {
     id: 2,
@@ -354,6 +356,7 @@ const projects = [
       "Built a fully responsive, secure platform, offering smooth functionality on all devices to support users wherever they are.",
     ],
     githubLink: "https://github.com/vladertec/NaVarti",
+    deployLink: "https://bfnavarti-4qzyj49vp-vladertecs-projects.vercel.app",
   },
 ]
 
@@ -482,13 +485,34 @@ const ProjectDetail = () => {
         ))}
       </ul>
 
-      <Link
-        href={project.githubLink}
-        passHref
-        className="project-detail__btn-container"
-      >
-        <button className="project-detail__btn"> VIEW ON GITHUB</button>
-      </Link>
+      <div className="project-detail__btn-container">
+        <Link
+          className="project-detail__btn-link"
+          href={project.githubLink}
+          passHref
+        >
+          <button className="project-detail__btn">VIEW ON GITHUB</button>
+        </Link>
+
+        <Link
+          className="project-detail__btn-link"
+          href={project.deployLink}
+          passHref
+        >
+          <button className="project-detail__btn">VISIT LIVE SITE</button>
+        </Link>
+      </div>
+      {/* <div className="project-detail__footer">
+        <p className="footer__text">
+          Copyright © 2024 portfolio website by{" "}
+          <a
+            className="footer__name"
+            href="https://www.linkedin.com/in/vladertec/"
+          >
+            Vladertec
+          </a>
+        </p>
+      </div> */}
     </div>
   )
 }

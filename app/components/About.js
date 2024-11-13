@@ -1,5 +1,4 @@
 import { useInView } from "react-intersection-observer"
-
 const About = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -13,35 +12,31 @@ const About = () => {
         Building intuitive interfaces that connect people with technology
       </p>
       <p className="about__information about__information-computer">
-        As a recent graduate with a Master's degree in Information Technology, I
-        am eager to begin my career as a frontend developer in the IT field. My
-        academic journey has equipped me with a solid foundation in frontend
-        development, particularly in creating visually appealing and
-        user-friendly interfaces using HTML, CSS, JavaScript/TypeScript, and
-        React. I am committed to enhancing my technical skills and gaining
-        practical experience within a dynamic company. Known for my strong
-        communication skills and teamwork abilities, I thrive in collaborative
-        environments where diverse ideas are valued. My motivation for personal
-        growth drives me to continuously seek knowledge and improve my skill
-        set.
+        With hands-on experience in frontend development and a strong foundation
+        in modern web technologies, I specialize in creating seamless user
+        experiences. My work spans multiple projects where I successfully
+        implemented dynamic, responsive designs using HTML, CSS,
+        JavaScript/TypeScript, and React, ensuring optimal performance and
+        accessibility. My practical skills go beyond the basics, encompassing
+        detailed knowledge of responsive layouts, animations, and clean,
+        maintainable code.
       </p>
 
       <p className="about__information about__information-mobile">
-        As a recent Master's graduate in Information Technology, I am eager to
-        start my career as a frontend developer. My studies have provided a
-        strong foundation in frontend technologies, including HTML, CSS,
-        JavaScript/TypeScript, and React, enabling me to create visually
-        appealing and user-friendly interfaces. I am committed to enhancing my
-        skills and gaining practical experience in a dynamic company. With
-        strong communication and teamwork abilities, I thrive in collaborative
-        environments and am motivated to continuously learn and grow.
+        I’m committed to ongoing professional growth and staying updated with
+        the latest web standards and development practices. Known for my
+        problem-solving abilities and keen attention to detail, I focus on
+        delivering solutions that meet client expectations and enhance user
+        engagement. In collaborative environments, I value diverse perspectives
+        and foster open communication to drive project success.
       </p>
 
-      <p className="about__information">
-        I am excited about the opportunity to contribute to an innovative
-        organization that fosters professional development. I look forward to
-        leveraging my skills to create impactful digital solutions and help your
-        team achieve its goals.
+      <p className="about__information" id="education">
+        I look forward to contributing to an innovative team, bringing my
+        passion for frontend development and my dedication to quality and
+        efficiency. By leveraging my skills in cutting-edge web technologies, I
+        aim to make a meaningful impact and support your team's goals in
+        delivering exceptional digital experiences.
       </p>
     </div>
   )

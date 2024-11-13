@@ -125,4 +125,8 @@
       }
     }
   }
+
+  @include desktop {
+    padding: 9% 8%;
+  }
 }
