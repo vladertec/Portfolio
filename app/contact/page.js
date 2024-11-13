@@ -1,10 +1,11 @@
 "use client"
 
 import { useInView } from "react-intersection-observer"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import emailjs from "emailjs-com"
+import { useRouter } from "next/navigation"
 
 const ContactPage = () => {
   const { ref, inView } = useInView({
@@ -13,6 +14,7 @@ const ContactPage = () => {
   })
 
   const [status, setStatus] = useState("")
+  const router = useRouter()
 
   const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
@@ -41,6 +43,10 @@ const ContactPage = () => {
       if (result.status === 200) {
         setStatus("Message sent successfully!")
         resetForm()
+
+        setTimeout(() => {
+          router.push("/")
+        }, 3000)
       } else {
         setStatus("Error sending message.")
       }
@@ -51,7 +57,7 @@ const ContactPage = () => {
 
   return (
     <div ref={ref} className={`contact ${inView ? "visible" : ""}`}>
-      <h1 className="contact__title">SEND ME MESSAGE</h1>
+      <h1 className="contact__title">SEND ME A MESSAGE</h1>
       <Formik
         initialValues={{
           name: "",
