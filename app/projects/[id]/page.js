@@ -247,7 +247,7 @@ const projects = [
     ],
 
     githubLink: "https://github.com/vladertec/Barbershop_information_system",
-    deployLink: "https://github.com/vladertec/Barbershop_information_system",
+    deployLink: "https://barbershop-information-system.vercel.app",
   },
   {
     id: 2,
